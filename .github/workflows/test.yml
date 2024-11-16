@@ -4,5 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: My first step
-        uses: docker://alpine:3.8
+      - uses: docker://ubuntu
+        with:
+          entrypoint: /bin/echo
+          args: hello!
