@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo hello
-        shell: /bin/bash -c '{0}'
+        shell: /bin/bash -e '{0}'
