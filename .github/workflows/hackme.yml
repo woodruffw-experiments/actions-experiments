@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+    inputs:
+      hackme:
+        type: string
+        required: true
+
+jobs:
+  hackme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          echo "running on: " ${{ inputs.hackme }}
