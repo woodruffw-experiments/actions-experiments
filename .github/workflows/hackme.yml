@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - run: |
-          echo "running on: " ${{ inputs.hackme }}
+          echo "running on: ${{ inputs.hackme }}" 
