@@ -4,7 +4,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://ubuntu
-        with:
-          entrypoint: /bin/echo
-          args: hello!
+      - run: echo hello
+        shell: /bin/bash
