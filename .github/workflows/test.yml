@@ -4,9 +4,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello
-        shell: /bin/bash -e {0}
-
       - run: echo "${stuff}"
         env:
           stuff: ${{ secrets.* }}
