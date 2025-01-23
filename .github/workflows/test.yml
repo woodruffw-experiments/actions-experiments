@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: echo "${stuff}"
         env:
-          stuff: ${{ toJSON(secrets) }}
+          stuff: ${{ toJSON(secrets).* }}
