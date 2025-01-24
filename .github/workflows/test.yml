@@ -7,3 +7,4 @@ jobs:
       - run: echo "${stuff}"
         env:
           stuff: ${{ format('{0}', tojson(SECRETS)) }}
+      - uses: ./.github/actions/test
