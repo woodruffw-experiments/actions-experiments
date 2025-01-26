@@ -6,3 +6,10 @@ jobs:
     steps:
       - run: echo hello
         if: github.ref == 'refs/heads/main'
+
+      - run: echo ${foo} ${bar} ${baz}
+        env:
+          foo: ${{ SECRETS.foo }}
+          bar: ${{ Secrets.BAR }}
+          baz: ${{ SeCRetS.Baz }}
+          
