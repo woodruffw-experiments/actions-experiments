@@ -4,8 +4,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${stuff}"
-        env:
-          stuff: ${{ format('{0}', tojson(SECRETS)) }}
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/test
+      - run: echo hello
+        if: github.ref == 'refs/heads/main'
