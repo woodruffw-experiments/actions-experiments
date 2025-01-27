@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo hello
-        if: github.ref == 'refs/heads/main'
+        if: GITHUB.ref == 'refs/heads/main'
 
       - run: echo ${foo} ${bar} ${baz}
         env:
