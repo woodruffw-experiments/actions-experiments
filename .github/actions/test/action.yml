@@ -1,3 +1,10 @@
+inputs:
+  foo:
+    default: 'lol'
+outputs:
+  bar:
+    value: 'hmm'
+
 runs:
   using: 'composite'
   steps:
