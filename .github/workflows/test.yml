@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "${{ toJSON(github) }}"
-          echo "${{ fromJSON(toJSON(github)) }}"
+          echo "toJSON returns: ${{ toJSON(github) }}"
+          echo "fromJSON returns: ${{ fromJSON(toJSON(github)) }}"
