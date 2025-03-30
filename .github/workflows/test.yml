@@ -4,15 +4,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello
-        if: GITHUB.ref == 'refs/heads/main'
-
-      - run: echo ${foo} ${bar} ${baz}
-        env:
-          foo: ${{ SECRETS.foo }}
-          bar: ${{ Secrets.BAR }}
-          baz: ${{ SeCRetS.Baz }}
-          
-      - uses: actions/checkout@v4
-
-      - uses: ./.github/actions/test
+      - run: |
+          echo "${{ toJSON(github) }}"
+          echo "${{ fromJSON(toJSON(github)) }}"
