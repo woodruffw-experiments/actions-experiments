@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "test: ${{ true && github && github.ref }}"
+          echo "test: ${{ true && false && github.ref }}"
