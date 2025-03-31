@@ -5,5 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "toJSON returns: ${{ toJSON(github) }}"
-          echo "fromJSON returns: ${{ fromJSON(toJSON(github)) }}"
+          echo "test: ${{ true && 'thing' }}"
