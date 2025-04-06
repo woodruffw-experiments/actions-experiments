@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: apt install -y tcc
+      - run: sudo apt install -y tcc
       - run: |
           #include <stdio.h>
 
