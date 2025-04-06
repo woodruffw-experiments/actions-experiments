@@ -1,0 +1,15 @@
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt install -y tcc
+      - run: |
+          #include <stdio.h>
+
+          int main() {
+              printf("hello world\n");
+              return 0;
+          }
+        shell: tcc -run {0}
