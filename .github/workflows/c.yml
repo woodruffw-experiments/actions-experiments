@@ -1,0 +1,14 @@
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          #include <stdio.h>
+
+          int main() {
+              printf("hello world\n");
+              return 0;
+          }
+        shell: gcc -std=c11 -o lol -x c {0}; ./lol
