@@ -1,0 +1,16 @@
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          touch ./bash
+          chmod +x ./bash
+          echo '#!/bin/sh' > ./bash
+          echo 'echo hello from fake bash' >> ./bash
+
+          echo "${PWD}" >> "${GITHUB_PATH}"
+      - run: |
+          echo "this doesn't do what you expect"
+        shell: bash
